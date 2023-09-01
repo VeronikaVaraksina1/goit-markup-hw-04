@@ -61,6 +61,8 @@ img {
 
 .page-header {
   border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .page-header-container {
@@ -104,6 +106,9 @@ img {
 .nav-link,
 .contacts-link {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.link-active {
+  color: var(--color-ocean);
 }
 
 .link-active::after {
@@ -154,6 +159,7 @@ img {
 }
 
 .hero-section {
+  max-width: 1440px;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
@@ -162,6 +168,7 @@ img {
   background-color: var(--primary-text-color-navyblue);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   text-align: center;
   padding: 188px 0;
 }
@@ -221,7 +228,10 @@ img {
 }
 
 .benefits-icon-container {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 112px;
   border: 1px solid #8e8f99;
   border-radius: 4px;
   background-color: var(--color-cloud);
@@ -251,11 +261,11 @@ img {
 .text-team,
 .text-portfolio,
 .text-footer,
+.text-social-media-footer,
 .overlay {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  font-weight: 400;
 }
 
 .team-section {
@@ -396,8 +406,11 @@ img {
 
 .container-footer {
   display: flex;
-  justify-content: start;
-  gap: 120px;
+  align-items: baseline;
+}
+
+.logo-footer-container {
+  margin-right: 120px;
 }
 
 .logo-icon-footer {
@@ -415,12 +428,17 @@ img {
   max-width: 264px;
 }
 
+.text-social-media-footer {
+  font-weight: 500;
+  color: var(--accent-text-color);
+  margin-bottom: 16px;
+}
+
 .social-link-list-footer {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 16px;
-  margin-top: 16px;
 }
 
 .social-link-footer {
